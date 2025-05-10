@@ -1,0 +1,17 @@
+{
+  "manifest_version": 3,
+  "name": "简化直播间",
+  "version": "1.0",
+  "description": "简化抖音直播控制台界面，移除顶部导航栏",
+  "permissions": ["activeTab"],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://buyin.jinritemai.com/dashboard/live/control*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+} 
